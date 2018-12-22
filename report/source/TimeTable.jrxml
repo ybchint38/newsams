@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="650" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" whenResourceMissingType="Empty" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="classcoordinator" class="java.lang.String"/>
+	<parameter name="class" class="java.lang.String"/>
+	<parameter name="wefdate" class="java.lang.String"/>
+	<parameter name="preparedby" class="java.lang.String"/>
+	<parameter name="head" class="java.lang.String"/>
+	<parameter name="course_coordinator" class="java.lang.String"/>
+	<parameter name="allocationdata" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="scheduledata" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="44" width="799" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{class}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="1" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true" isUnderline="false" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[SHRI VAISHNAV INSTITUTE OF MANAGEMENT,INDORE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[TIME TABLE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="1" y="44" width="347" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{classcoordinator}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="625" y="44" width="177" height="20" forecolor="#000000" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{wefdate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<subreport>
+				<reportElement x="1" y="0" width="801" height="90"/>
+				<dataSourceExpression><![CDATA[$P{scheduledata}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["schedule.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="109">
+			<subreport>
+				<reportElement x="0" y="0" width="802" height="108"/>
+				<dataSourceExpression><![CDATA[$P{allocationdata}]]></dataSourceExpression>
+				<subreportExpression><![CDATA["subjectallocation_subreport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="25" width="100" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Prepared By]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="5" y="5" width="279" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{preparedby}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="554" y="5" width="246" height="20"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{head}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="497" y="25" width="303" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Head, Department of Computer Science and Applications]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="700" y="45" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="5" width="801" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{course_coordinator}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="25" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Course Coordinator]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

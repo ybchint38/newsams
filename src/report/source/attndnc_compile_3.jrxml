@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="class" class="java.lang.String"/>
+	<parameter name="duration" class="java.lang.String"/>
+	<parameter name="s1_name" class="java.lang.String"/>
+	<parameter name="s2_name" class="java.lang.String"/>
+	<parameter name="s3_name" class="java.lang.String"/>
+	<parameter name="s4_name" class="java.lang.String"/>
+	<parameter name="s5_name" class="java.lang.String"/>
+	<parameter name="s6_name" class="java.lang.String"/>
+	<parameter name="s7_name" class="java.lang.String"/>
+	<parameter name="s8_name" class="java.lang.String"/>
+	<parameter name="s1_total" class="java.lang.String"/>
+	<parameter name="s2_total" class="java.lang.String"/>
+	<parameter name="s3_total" class="java.lang.String"/>
+	<parameter name="s4_total" class="java.lang.String"/>
+	<parameter name="s5_total" class="java.lang.String"/>
+	<parameter name="theo_total" class="java.lang.String"/>
+	<parameter name="s6_total" class="java.lang.String"/>
+	<parameter name="s7_total" class="java.lang.String"/>
+	<parameter name="s8_total" class="java.lang.String"/>
+	<parameter name="prac_total" class="java.lang.String"/>
+	<parameter name="class_coordinator" class="java.lang.String"/>
+	<parameter name="head" class="java.lang.String"/>
+	<parameter name="course_coordinator" class="java.lang.String"/>
+	<field name="sno" class="java.lang.String"/>
+	<field name="sname" class="java.lang.String"/>
+	<field name="s1" class="java.lang.String"/>
+	<field name="s2" class="java.lang.String"/>
+	<field name="s3" class="java.lang.String"/>
+	<field name="s4" class="java.lang.String"/>
+	<field name="s5" class="java.lang.String"/>
+	<field name="theo_total" class="java.lang.String"/>
+	<field name="theo_per" class="java.lang.String"/>
+	<field name="s6" class="java.lang.String"/>
+	<field name="s7" class="java.lang.String"/>
+	<field name="s8" class="java.lang.String"/>
+	<field name="prac_total" class="java.lang.String"/>
+	<field name="prac_per" class="java.lang.String"/>
+	<field name="total_per" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[SHRI VAISHNAV INSTITUTE OF MANAGEMENT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Attendance Compilation]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="40" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{class}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="802" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{duration}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="802" height="1"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="801" y="1" width="1" height="53"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="1" width="33" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Sr. No.]]></text>
+			</staticText>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="34" y="0" width="1" height="54"/>
+			</line>
+			<staticText>
+				<reportElement x="35" y="1" width="192" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Name of Student]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="399" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s5_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s4_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s3_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s2_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s1_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="614" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s8_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="571" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s6_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="2" width="43" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+					<paragraph leftIndent="1"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s6_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="38" width="43" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s1_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="38" width="43" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s2_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="313" y="38" width="43" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s3_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="38" width="43" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s4_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="38" width="43" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s5_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="38" width="36" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{theo_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="528" y="38" width="42" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s6_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="571" y="38" width="43" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s7_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="615" y="38" width="41" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{s8_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="657" y="38" width="37" height="16"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{prac_total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="226" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="270" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="313" y="1" width="1" height="53"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="355" y="1" width="1" height="53"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="398" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="442" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="479" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="526" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="570" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="614" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="656" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="694" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToBandHeight" x="743" y="0" width="1" height="54"/>
+			</line>
+			<line>
+				<reportElement x="0" y="37" width="802" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="443" y="1" width="36" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="1" width="46" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="657" y="1" width="37" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="695" y="1" width="48" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="744" y="1" width="57" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Grand Total (%)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="53" width="802" height="1" forecolor="#808080"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="19" width="802" height="1" forecolor="#808080"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="34" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="226" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="270" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="355" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="614" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="398" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="442" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="694" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="656" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="801" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="743" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="570" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="479" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="526" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="313" y="0" width="1" height="20"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="0" width="33" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="35" y="0" width="191" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="43" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="43" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="0" width="36" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{theo_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="0" width="41" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="271" y="0" width="42" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="0" width="41" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="480" y="0" width="46" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{theo_per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="0" width="43" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="657" y="0" width="37" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prac_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="572" y="0" width="42" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="615" y="0" width="41" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{s8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="695" y="0" width="48" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prac_per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="744" y="0" width="57" height="19"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_per}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="49" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="29" width="219" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Class Co-ordinator]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="9" width="219" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{class_coordinator}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="9" width="360" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{head}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="526" y="29" width="275" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Head, Department of Computer Science and Application]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="800" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Course Co-ordinator]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="9" width="801" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{course_coordinator}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="50">
+			<line>
+				<reportElement x="0" y="0" width="802" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

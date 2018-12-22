@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Faculty" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="151"/>
+	<field name="FNAME" class="java.lang.String"/>
+	<field name="CONTACTNO" class="java.lang.String"/>
+	<field name="TIMESLOT" class="java.lang.String"/>
+	<field name="DESIGNATION" class="java.lang.String"/>
+	<field name="LEC_PER_WEEK" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="113" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="82" height="78"/>
+				<imageExpression><![CDATA["\\report-pics\\header.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="84" y="4" width="470" height="23"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SHRI VAISHNAV INSTITUTE OF MANAGEMENT]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="86" width="555" height="1"/>
+			</line>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="466" y="93" width="89" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="84" y="29" width="470" height="20"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Scheme No. 71, Gumasta Nagar, Indore Ph.: 2780011, 2382962 ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="3" width="554" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[FACULTY  REPORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="1" width="199" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="241" y="1" width="81" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Contact No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="0" width="109" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="1" width="40" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Sr No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="1" width="61" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[No of Lec /week]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="554" height="1"/>
+			</line>
+			<line>
+				<reportElement x="41" y="0" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="240" y="0" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="322" y="0" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="433" y="0" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="553" y="0" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="36"/>
+			</line>
+			<line>
+				<reportElement x="0" y="36" width="554" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="434" y="1" width="59" height="35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[Timing]]></text>
+			</staticText>
+			<line>
+				<reportElement x="493" y="1" width="1" height="35"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="553" y="0" width="1" height="20"/>
+			</line>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="1" y="1" width="30" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="45" y="1" width="195" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{FNAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="241" y="0" width="81" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CONTACTNO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="493" y="1" width="62" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph rightIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LEC_PER_WEEK}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="41" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="240" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="322" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="433" y="0" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="20" width="554" height="1" forecolor="#808080"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="324" y="0" width="109" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{DESIGNATION}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="493" y="-1" width="1" height="22"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="435" y="1" width="58" height="18"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{TIMESLOT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="514" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="554" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

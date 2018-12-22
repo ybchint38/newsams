@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="time" class="java.lang.String"/>
+	<field name="mon" class="java.lang.String"/>
+	<field name="tue" class="java.lang.String"/>
+	<field name="wed" class="java.lang.String"/>
+	<field name="thus" class="java.lang.String"/>
+	<field name="fri" class="java.lang.String"/>
+	<field name="sat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="472" y="7" width="110" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[THURSDAY]]></text>
+			</staticText>
+			<line>
+				<reportElement x="471" y="6" width="1" height="37"/>
+			</line>
+			<staticText>
+				<reportElement x="362" y="7" width="110" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[WEDNESDAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="7" width="110" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[MONDAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="25" width="134" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="7" width="110" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[TUESDAY]]></text>
+			</staticText>
+			<line>
+				<reportElement x="141" y="6" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement x="361" y="6" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement x="582" y="6" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement x="1" y="7" width="140" height="36" forecolor="#808080"/>
+			</line>
+			<line>
+				<reportElement x="801" y="6" width="1" height="37"/>
+			</line>
+			<line>
+				<reportElement x="252" y="6" width="1" height="37"/>
+			</line>
+			<staticText>
+				<reportElement x="4" y="7" width="134" height="18"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[DAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="582" y="7" width="110" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[FRIDAY]]></text>
+			</staticText>
+			<line>
+				<reportElement x="691" y="6" width="1" height="37"/>
+			</line>
+			<staticText>
+				<reportElement x="692" y="7" width="110" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true" pdfFontName="Times-Bold"/>
+				</textElement>
+				<text><![CDATA[SATURDAY]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="6" width="802" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="7" width="1" height="36"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="362" y="1" width="109" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{wed}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="252" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="141" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="801" height="1" forecolor="#808080"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="582" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="1" height="21"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="RelativeToTallestObject" x="16" y="1" width="122" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="801" y="1" width="1" height="20" isPrintInFirstWholeBand="true"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="471" y="0" width="110" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{thus}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="141" y="0" width="110" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mon}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="471" y="1" width="1" height="20"/>
+			</line>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="691" y="1" width="1" height="20"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="252" y="0" width="108" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tue}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="582" y="1" width="108" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fri}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement stretchType="RelativeToTallestObject" x="361" y="1" width="1" height="20"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="691" y="1" width="109" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" pdfFontName="Times-Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="4" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="801" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
